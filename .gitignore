@@ -1,0 +1,108 @@
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python environments
+venv/
+.venv/
+env/
+ENV/
+myenv/
+
+# Distribution / packaging
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# =========================
+# Django
+# =========================
+
+# Local database
+db.sqlite3
+db.sqlite3-journal
+
+# Django static/media files
+staticfiles/
+media/
+
+# Django cache
+*.log
+
+# =========================
+# Environment Variables
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+# IDE / Editors
+# =========================
+
+.vscode/
+.idea/
+
+# VS Code settings
+*.code-workspace
+
+# =========================
+# OS Generated Files
+# =========================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# =========================
+# Testing / Coverage
+# =========================
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# =========================
+# Jupyter Notebook
+# =========================
+
+.ipynb_checkpoints/
+
+# =========================
+# Ruff / mypy
+# =========================
+
+.mypy_cache/
+.ruff_cache/
+
+# =========================
+# Celery
+# =========================
+
+celerybeat-schedule
+
+# =========================
+# Temporary files
+# =========================
+
+*.tmp
+*.temp
+*.swp
+*.swo
