@@ -5,7 +5,7 @@ from . import views
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register('api/posts', PostViewSet, basename='post')
+router.register('api/posts', PostViewSet, basename='api-post')
 router.register("api/comments", CommentViewSet, basename="comment")
 
 urlpatterns = [
