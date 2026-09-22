@@ -1,4 +1,36 @@
 {% extends "blog/base.html" %}
+
 {% block content %}
-    <h1>About Page!</h1>
+
+<div class="content-section">
+
+    <div class="mb-4">
+        <h1>About Blogarithm</h1>
+
+        <p class="text-muted mb-0">
+            A simple blogging platform built with Django.
+        </p>
+    </div>
+
+    <div class="border-top pt-4">
+
+        <p>
+            Blogarithm is a full-stack web application where users
+            can create, read, update and delete blog posts.
+        </p>
+
+        <p>
+            Users can create an account, manage their profile,
+            publish posts and interact with posts through comments.
+        </p>
+
+        <p class="mb-0">
+            The application is powered by Django and PostgreSQL,
+            with a REST API available for programmatic access.
+        </p>
+
+    </div>
+
+</div>
+
 {% endblock content %}

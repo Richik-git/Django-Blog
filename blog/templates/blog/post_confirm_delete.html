@@ -1,16 +1,45 @@
 {% extends "blog/base.html" %}
+
 {% block content %}
-    <div class="content-section">
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Delete Post</legend>
-                <h2>Are you sure you want to delete the post "{{ object.title }}"</h2>
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
-                <a class="btn btn-outline-secondary" href="{% url 'post-detail' object.id %}">Cancel</a>
-            </div>
-        </form>
+
+<div class="content-section">
+
+    <h1 class="mb-2">Delete Post</h1>
+
+    <p class="text-muted mb-4">
+        Are you sure you want to permanently delete this post?
+    </p>
+
+    <div class="border rounded p-3 mb-4">
+        <h4 class="mb-1">{{ object.title }}</h4>
+
+        <small class="text-muted">
+            Posted by {{ object.author.username }}
+            on {{ object.date_posted|date:"F d, Y" }}
+        </small>
     </div>
+
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <button
+            class="btn btn-danger"
+            type="submit"
+        >
+            Yes, Delete
+        </button>
+
+        <a
+            href="{% url 'post-detail' object.id %}"
+            class="btn btn-outline-secondary ml-2"
+        >
+            Cancel
+        </a>
+
+    </form>
+
+</div>
+
 {% endblock content %}
